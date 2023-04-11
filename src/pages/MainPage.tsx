@@ -1,5 +1,5 @@
 import React from "react"
-import {Button, Flex, Heading, IconButton, Stack} from "@chakra-ui/react";
+import {Button, Flex, Heading, IconButton, Stack, Text} from "@chakra-ui/react";
 import {FaBriefcase, FaDollarSign, FaTelegramPlane, FaTwitch, FaVk} from "react-icons/fa";
 import {Link} from "react-router-dom";
 
@@ -107,6 +107,16 @@ function MainPage() {
                     display={["flex", "none"]}
                 />
             </Stack>
+            <Text
+                mt="3"
+                as={Link} to="/about"
+                fontFamily="sans-serif"
+                fontSize="md"
+                fontWeight="600"
+                color="#343434"
+            >
+                about me /
+            </Text>
         </Flex>
     )
 }
