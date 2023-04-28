@@ -1,6 +1,6 @@
 import React from "react"
 import {Badge, Button, Flex, Heading, IconButton, Stack, Tooltip} from "@chakra-ui/react";
-import {FaCat, FaDiscord, FaGamepad} from "react-icons/fa";
+import {FaCat, FaCode, FaDiscord, FaGamepad} from "react-icons/fa";
 import {Link} from "react-router-dom";
 
 function ProjectsPage() {
@@ -61,6 +61,16 @@ function ProjectsPage() {
                         <Badge variant="solid" mt="1px" ml="1" colorScheme="blackAlpha">rip</Badge>
                     </Button>
                 </Tooltip>
+                <Tooltip textAlign="center" label="Использование rcon для администрирования сервера Minecraft">
+                    <Button
+                        colorScheme="teal"
+                        leftIcon={<FaCode />}
+                        display={["none", "flex"]}
+                        onClick={RconBot}
+                    >
+                        RconBot
+                    </Button>
+                </Tooltip>
 
 
                 <IconButton
@@ -84,6 +94,13 @@ function ProjectsPage() {
                     display={["flex", "none"]}
                     onClick={EasyRPC}
                 />
+                <IconButton
+                    colorScheme='teal'
+                    aria-label='RconBot'
+                    icon={<FaCode />}
+                    display={["flex", "none"]}
+                    onClick={RconBot}
+                />
             </Stack>
         </Flex>
     )
@@ -99,5 +116,9 @@ function MineOnline() {
 
 function EasyRPC() {
     window.open("https://github.com/t4llfly/EasyRPC")
+}
+
+function RconBot() {
+    window.open("https://github.com/t4llfly/RconBot")
 }
 export default ProjectsPage;
