@@ -1,6 +1,6 @@
 import React from "react"
 import {Badge, Button, Flex, Heading, IconButton, Stack, Tooltip} from "@chakra-ui/react";
-import {FaCat, FaCode, FaDiscord, FaGamepad} from "react-icons/fa";
+import {FaCat, FaCode, FaDiscord, FaGamepad, FaStar} from "react-icons/fa";
 import {Link} from "react-router-dom";
 
 function ProjectsPage() {
@@ -71,6 +71,16 @@ function ProjectsPage() {
                         RconBot
                     </Button>
                 </Tooltip>
+                <Tooltip textAlign="center" label="Плагин Minecraft, добавляющий в Энд ambient частицы">
+                    <Button
+                        colorScheme="purple"
+                        leftIcon={<FaStar />}
+                        display={["none", "flex"]}
+                        onClick={ctgParticles}
+                    >
+                        ctgParticles
+                    </Button>
+                </Tooltip>
 
 
                 <IconButton
@@ -101,6 +111,13 @@ function ProjectsPage() {
                     display={["flex", "none"]}
                     onClick={RconBot}
                 />
+                <IconButton
+                    colorScheme='purple'
+                    aria-label='ctgParticles'
+                    icon={<FaStar />}
+                    display={["flex", "none"]}
+                    onClick={ctgParticles}
+                />
             </Stack>
         </Flex>
     )
@@ -120,5 +137,9 @@ function EasyRPC() {
 
 function RconBot() {
     window.open("https://github.com/t4llfly/RconBot")
+}
+
+function ctgParticles() {
+    window.open("https://github.com/t4llfly/ctgParticles")
 }
 export default ProjectsPage;

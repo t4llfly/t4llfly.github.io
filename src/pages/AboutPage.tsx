@@ -1,7 +1,6 @@
 import React from "react"
 import {Box, Flex, Heading, Text} from "@chakra-ui/react";
 import {Link} from "react-router-dom";
-
 function AboutPage() {
     return(
         <Flex
@@ -9,7 +8,7 @@ function AboutPage() {
             bg="#222222"
             color="white"
             minH="100vh"
-            p="4"
+            p={["0", "4"]}
             justifyContent="center"
             flexDirection="column"
         >
@@ -30,7 +29,7 @@ function AboutPage() {
                 justifyContent={["center", "space-between"]}
                 alignItems={["center", "flex-end"]}
             >
-                <Text fontWeight="600" ml="30" mr="30" mt="15px" mb="15px" textAlign="center">
+                <Text fontWeight="600" ml={["15", "30"]} mr="30" mt="15px" mb="15px" textAlign="center">
                     Меня зовут Владимир, я из города Астана, Казахстан.
                     <br/>
                     В интернете я TallFly (T4llFly), и я пишу разные программы и сайты для обучения.

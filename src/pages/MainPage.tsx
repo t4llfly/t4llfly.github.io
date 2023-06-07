@@ -63,7 +63,7 @@ function MainPage() {
                     Twitch
                 </Button>
                 <Button
-                    colorScheme="blackAlpha"
+                    colorScheme="green"
                     leftIcon={<FaDollarSign />}
                     onClick={Donate}
                     display={["none", "flex"]}
@@ -100,7 +100,7 @@ function MainPage() {
                     display={["flex", "none"]}
                 />
                 <IconButton
-                    colorScheme='blackAlpha'
+                    colorScheme='green'
                     aria-label='Donate'
                     icon={<FaDollarSign />}
                     onClick={Donate}
